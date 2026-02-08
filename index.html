@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chocolate Day 💝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #4b1c1c, #7b2d2d);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      color: #4b1c1c;
+      border-radius: 18px;
+      padding: 28px 22px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #7b2d2d;
+    }
+
+    .emoji {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 22px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      background: #7b2d2d;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #5e1f1f;
+    }
+
+    #message {
+      margin-top: 22px;
+      font-size: 16px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="emoji">🍫</div>
+    <h1>Happy Chocolate Day, Khushi</h1>
+
+    <p>
+      Just a small Chocolate Day wish 🍫<br>
+      The chocolate’s waiting for you.
+    </p>
+
+    <button id="chocoBtn">Unwrap the Chocolate 🍬</button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("chocoBtn");
+    const msg = document.getElementById("message");
+
+    btn.onclick = () => {
+      msg.style.display = "block";
+      msg.innerHTML = `
+        🍫❤️<br>
+        This is just a little way of saying<br>
+        you make moments sweeter just by being you.
+      `;
+
+      btn.style.display = "none";
+
+      // Spotify song opens (same behavior as your Valentine one)
+      window.open(
+        "https://open.spotify.com/track/2LlOeW5rVcvl3QcPNPcDus",
+        "_blank"
+      );
+    };
+  </script>
+
+</body>
+</html>
